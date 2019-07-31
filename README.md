@@ -5,7 +5,7 @@ The accurate identification of the exon and intron boundaries is critical for th
 We developed the SpliceDeep model, an ensemble of deep convolutional neural networks, to automatically extract the features from the DNA and being capable of generalizing results to other organisms for which it was not trained. The performance of the model is evaluated on the recognition of SS of different organisms: Homo sapiens, Oryza japonica, Arabidopsis thaliana, C.elegans, and Drosophila melanogaster. In addition to improved accuracy compared to the state-of-the-art tools, the SpliceDeep results obtained from the cross-organism validation demonstrated that the model correctly identified conserved genomic elements that may allow users to annotate SS in new genomes by choosing the taxonomically most close model.
 
 ### Requirements
-  - The tool runs on linux machine.
+  - Models run on linux machine.
   - Anaconda Python 2.7 or later.
   - keras.
     
