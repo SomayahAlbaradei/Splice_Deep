@@ -9,8 +9,8 @@ We developed the SpliceDeep model, an ensemble of deep convolutional neural netw
   - Anaconda Python 2.7 or later.
   - keras.
     
-### Run
-We propose five models to recognize SS in different organisms: Homo sapiens 'hs', Oryza japonica 'oriza', Arabidopsis thaliana 'at', C.elegans 'c_elegans', and Drosophila melanogaster 'd_mel'. Our models take DNA seqences with 602 length as input and predict whether the given sequence represents a true/false SS.    
+### Usage
+We propose five models to recognize SS in different organisms: Homo sapiens 'hs', Oryza japonica 'oriza', Arabidopsis thaliana 'at', C.elegans 'c_elegans', and Drosophila melanogaster 'd_mel'. Our models take DNA seqences with 602 length (SS in 300 and 301 positions) as input, performs feature extraction and feature selection using DL from the flanking regons, and predict whether the given sequence represents a true/false SS using an artificial neural network (NN) binary classifier.    
 
 To run an Acceptor model:
 
