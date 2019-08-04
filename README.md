@@ -17,7 +17,7 @@ To run an Acceptor model:
 ```
   $ python Splice_Deep_Acceptor.py org='pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' fname= 'pass fasta file'
 ```
-  # e.g. to use a Homo sapiens model: (Note: AcSS_test is provided in Data folder and contain 2000 positive/negative seqences)
+  #### e.g. to use a Homo sapiens model: (Note: AcSS_test is provided in Data folder and contain 2000 positive/negative seqences)
 ```  
   $ python Splice_Deep_Acceptor.py org='hs' fname='AcSS_test.fa' 
     
@@ -30,7 +30,7 @@ To run a Donor model:
 ```
   $ python Splice_Deep_Donor.py 'pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' fname= 'pass fasta file'
   ```
-  # e.g. to use a Homo sapiens model: (Note: DoSS_test is provided in Data folder and contain 2000 positive/negative seqences)
+  #### e.g. to use a Homo sapiens model: (Note: DoSS_test is provided in Data folder and contain 2000 positive/negative seqences)
 ```  
   $ python Splice_Deep_Donor.py org='hs' fname='DoSS_test.fa'
   
