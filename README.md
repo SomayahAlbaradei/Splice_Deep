@@ -10,31 +10,47 @@ We developed the SpliceDeep model, an ensemble of deep convolutional neural netw
   - keras.
     
 ### Usage
-We propose five models to recognize SS in different organisms: Homo sapiens 'hs', Oryza japonica 'oriza', Arabidopsis thaliana 'at', C.elegans 'c_elegans', and Drosophila melanogaster 'd_mel'. Our models take DNA seqences with 602 length (SS in 300 and 301 positions) as input, performs feature extraction and feature selection using DL from the flanking regons, and predict whether the given sequence represents a true/false SS using an artificial neural network (NN) binary classifier.    
+We propose five models to recognize SS in different organisms: Homo sapiens 'hs', Oryza japonica 'oriza', Arabidopsis thaliana 'at', C.elegans 'c_elegans', and Drosophila melanogaster 'd_mel'. Our models take DNA seqences with 602 length (SS in 300 and 301 positions) as input, performs feature extraction and feature selection using DL from the flanking regons, and predict whether the given sequence represents a true/false SS using an artificial neural network (NN) binary classifier.  
 
+To successfully use Splice2deep models we recomend you to create a virtul environment:
+```
+ $ conda create -n splice2deep python=2.7 anaconda
+```
+Activate your virtual environment:
+```
+ $ source activate Splice2deep 
+```
+Install requirements: 
+```
+ $ conda install --file requirements.txt
+```
 To run an Acceptor model:
 
 ```
-  $ python Splice_Deep_Acceptor.py org='pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' fname= 'pass fasta file'
+  $ python Splice_Deep_Acceptor.py org='pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' Input= 'pass fasta file' Output='output file name'
 ```
   #### e.g. to use a Homo sapiens model: (Note: AcSS_test is provided in Data folder and contain 2000 positive/negative seqences)
 ```  
-  $ python Splice_Deep_Acceptor.py org='hs' fname='AcSS_test.fa' 
+  $ python Splice_Deep_Acceptor.py org='hs' Input='AcSS_test.fa' Output='hs_1'
     
 ```
-Predections will be stored in 'splicedeep_AcSS_output.txt' file. 
+Predections will be stored in 'splicedeep_AcSS_'+{Output}+'.txt' file. 
 
 
 To run a Donor model:
 
 ```
-  $ python Splice_Deep_Donor.py 'pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' fname= 'pass fasta file'
+  $ python Splice_Deep_Donor.py 'pass a shortcut of organism of intrest: hs,at,c_elegans,d_mel,oriza' Input= 'pass fasta file' Output='output file name'
   ```
   #### e.g. to use a Homo sapiens model: (Note: DoSS_test is provided in Data folder and contain 2000 positive/negative seqences)
 ```  
-  $ python Splice_Deep_Donor.py org='hs' fname='DoSS_test.fa'
+  $ python Splice_Deep_Donor.py org='hs' Input='DoSS_test.fa' Output='hs_1'
   
 ```
-Predections will be stored in 'splicedeep_DoSS_output.txt' file.  
+Predections will be stored in 'splicedeep_DoSS_output_'+{Output}+'.txt' file.  
+
+
+For comments please contact somayah.albaradei@kaust.edu.sa
   
+ 
 
