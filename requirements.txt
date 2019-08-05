@@ -1,0 +1,2 @@
+scikit-learn=0.20.2
+Keras==2.2.4
