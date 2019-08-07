@@ -6,7 +6,7 @@ We developed the SpliceDeep model, an ensemble of deep convolutional neural netw
 
 ### Requirements
   - Models run on linux machine.
-  - Anaconda Python 2.7 or later.
+  - Anaconda Python 3.6 or later.
   - keras.
     
 ### Usage
