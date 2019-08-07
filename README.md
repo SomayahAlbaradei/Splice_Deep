@@ -20,7 +20,7 @@ To successfully run Splice2deep models we recomend you to create a virtul enviro
 ```
 Activate your virtual environment:
 ```
- $ source activate Splice2deep 
+ $ source activate splice2deep 
 ```
 
 To run an Acceptor model:
