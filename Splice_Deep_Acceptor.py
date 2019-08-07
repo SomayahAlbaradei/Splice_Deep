@@ -64,7 +64,7 @@ def split_up_down(dna_list,sig_str,sig_end,begin,end):
 
 # encode sequnce to image (4*L)
 
-def EncodeSeqToMono_3D(dna_list):
+def EncodeSeqToMono_4D(dna_list):
         data=[]
         image=np.zeros((4,len(dna_list[0])))
     
@@ -150,6 +150,7 @@ def RemoveNonAGCT(dna_list):
             for c in s:
                 if c not in chars:
                     flag=-1
+                    print('Data are not ACGT')
             if flag==0:
                 dna_listACGT.append(s)
         
@@ -209,11 +210,14 @@ def main(org='hs', Input='AcSS_test.fa', Output='1'):
     
     Data=TextToList('./Data/'+parameter_dict["Input"])
     
+    #Data=RemoveNonAGCT(Data)
+    
     
     
     global_model = load_model('./models/acc_global_model_'+org)
     up_model = load_model('./models/acc_up_model_'+org)
     down_model = load_model('./models/acc_down_model_'+org)
+    #print(down_model)
     finalmodel='./models/acc_splicedeep_'+org+'.pkl'
     final_model = load_pickle(finalmodel)
 
@@ -250,7 +254,7 @@ def main(org='hs', Input='AcSS_test.fa', Output='1'):
     test_images=EncodeSeqToTri_64D(test_up)
     test= np.array(test_images,)
 
-    prediction = dwon_model.predict(test)
+    prediction = down_model.predict(test)
     dwonfeatures_t=prediction.tolist()
 
     # final model
@@ -274,6 +278,7 @@ def main(org='hs', Input='AcSS_test.fa', Output='1'):
 
 
     pred=final_model.predict(d_t)
+    #print(final_model.predict_proba(d_t))
 
     endtime = time. time()
     seconds=endtime - start

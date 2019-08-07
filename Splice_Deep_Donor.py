@@ -176,7 +176,7 @@ def load_pickle(pickle_file):
 
 # main function
 
-def main(org='hs', Input='AcSS_test.fa', Output='1'): 
+def main(org='hs', Input='DoSS_test.fa', Output='1'): 
     # variables input
     parameter_dict = {}
     for user_input in argv[1:]: 
