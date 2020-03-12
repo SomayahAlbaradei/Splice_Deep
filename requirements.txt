@@ -113,7 +113,7 @@ pkginfo==1.5.0.1
 pluggy==0.12.0
 ply==3.11
 protobuf==3.8.0
-psutil==5.6.3
+psutil==5.6.6
 ptyprocess==0.6.0
 py==1.8.0
 pycodestyle==2.5.0
